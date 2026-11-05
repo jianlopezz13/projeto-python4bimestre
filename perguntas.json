@@ -1,0 +1,122 @@
+[
+  {
+    "pergunta": "Quantos animais de cada espécie, logicamente, Moisés colocou na Arca?",
+    "opcoes": [
+      "A) Nenhum",
+      "B) Dois (um casal)",
+      "C) Sete",
+      "D) Um de cada"
+    ],
+    "resposta_correta": "A) Nenhum. (Quem construiu a Arca e colocou os animais foi Noé, não Moisés)."
+  },
+  {
+    "pergunta": "Você compra um item por R$ 60, vende por R$ 70, compra novamente por R$ 80 e vende finalmente por R$ 90. Logicamente, quanto lucro você teve ao todo?",
+    "opcoes": [
+      "A) R$ 10",
+      "B) R$ 20",
+      "C) R$ 30",
+      "D) R$ 0 (Ficou no zero a zero)"
+    ],
+    "resposta_correta": "B) R$ 20. (Você lucrou R$ 10 no primeiro negócio e R$ 10 no segundo: +10 +10 = +20)."
+  },
+  {
+    "pergunta": "Um avião cai exatamente na linha de fronteira entre o Brasil e a Argentina. Pensando logicamente, onde os sobreviventes devem ser enterrados?",
+    "opcoes": [
+      "A) No Brasil.",
+      "B) Na Argentina.",
+      "C) Metade em cada país.",
+      "D) Em lugar nenhum."
+    ],
+    "resposta_correta": "D) Em lugar nenhum. (Sobreviventes não são enterrados, eles estão vivos!)."
+  },
+  {
+    "pergunta": "O pai de Maria tem cinco filhas: Lalá, Lelé, Lili, Loló e... qual é o nome da quinta filha?",
+    "opcoes": [
+      "A) Lulu",
+      "B) Lulúcia",
+      "C) Maria",
+      "D) Lola"
+    ],
+    "resposta_correta": "C) Maria. (A pergunta começa dizendo 'O pai de Maria')."
+  },
+  {
+    "pergunta": "Se 5 máquinas levam 5 minutos para fazer 5 artigos, quanto tempo 100 máquinas levam para fazer 100 artigos?",
+    "opcoes": [
+      "A) 100 minutos",
+      "B) 50 minutos",
+      "C) 5 minutos",
+      "D) 1 minuto"
+    ],
+    "resposta_correta": "C) 5 minutos. (Cada máquina leva exatamente 5 minutos para fazer 1 artigo individual)."
+  },
+  {
+    "pergunta": "Se um galo bota um ovo exatamente na cumeeira (topo) de um telhado simétrico, para qual lado o ovo vai rolar?",
+    "opcoes": [
+      "A) Para o lado direito, por causa da gravidade.",
+      "B) Para o lado esquerdo, por causa do vento.",
+      "C) Para a frente.",
+      "D) Para lado nenhum."
+    ],
+    "resposta_correta": "D) Para lado nenhum. (Galos não botam ovos, só as galinhas)."
+  },
+  {
+    "pergunta": "Você está participando de uma corrida e, de repente, consegue ultrapassar o segundo colocado. Em qual posição você fica?",
+    "opcoes": [
+      "A) Primeiro",
+      "B) Segundo",
+      "C) Terceiro",
+      "D) Último"
+    ],
+    "resposta_correta": "B) Segundo. (Se você passou o segundo, você tomou o lugar dele, e não o do primeiro)."
+  },
+  {
+    "pergunta": "Você está em uma sala escura com um único palito de fósforo. Na sala há um lampião a gás, uma vela e uma lareira com lenha. O que você acende primeiro para resolver a escuridão?",
+    "opcoes": [
+      "A) O lampião a gás, pois ilumina mais.",
+      "B) A vela, pois dura mais tempo.",
+      "C) A lareira, pois também aquece.",
+      "D) O palito de fósforo."
+    ],
+    "resposta_correta": "D) O palito de fósforo. (Sem acender o fósforo primeiro, você não consegue acender as outras coisas)."
+  },
+  {
+    "pergunta": "Se três gatos caçam três ratos em três minutos, quantos gatos são necessários para caçar 100 ratos em 100 minutos?",
+    "opcoes": [
+      "A) 100 gatos",
+      "B) 33 gatos",
+      "C) 3 gatos",
+      "D) 1 gato"
+    ],
+    "resposta_correta": "C) 3 gatos. (Os mesmos 3 gatos caçam 3 ratos a cada 3 minutos, acumulando 100 ratos em 100 minutos)."
+  },
+  {
+    "pergunta": "Alguns meses do ano têm 30 dias, outros têm 31 dias. Quantos meses têm 28 dias?",
+    "opcoes": [
+      "A) 1",
+      "B) 6",
+      "C) 11",
+      "D) 12"
+    ],
+    "resposta_correta": "D) 12. (Todos os meses do ano têm pelo menos 28 dias)."
+  },
+  {
+    "pergunta": "Um médico lhe dá 3 pílulas e manda tomar uma a cada meia hora. Quanto tempo dura o tratamento total?",
+    "opcoes": [
+      "A) 1 hora e meia",
+      "B) 1 hora",
+      "C) 45 minutos",
+      "D) 2 horas"
+    ],
+    "resposta_correta": "B) 1 hora. (Pílula 1 no minuto 0; Pílula 2 no minuto 30; Pílula 3 no minuto 60)."
+  },
+  {
+    "pergunta": "O que pertence exclusivamente a você, mas as outras pessoas usam muito mais do que você mesmo?",
+    "opcoes": [
+      "A) O seu dinheiro",
+      "B) A sua casa",
+      "C) O seu nome",
+      "D) O seu celular"
+    ],
+    "resposta_correta": "C) O seu nome."
+  }
+]
