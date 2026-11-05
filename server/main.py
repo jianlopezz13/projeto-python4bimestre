@@ -5,7 +5,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-# Seu banco de dados de perguntas
+
 banco_de_perguntas = [
     {
         "pergunta": "Qual é a capital do Brasil?",
@@ -20,14 +20,13 @@ banco_de_perguntas = [
 ]
 
 
-# Esta é a rota que você vai acessar no navegador
 @app.get("/")
 def entregar_quiz():
-    # Criamos uma cópia para poder embaralhar
+
     perguntas_misturadas = banco_de_perguntas.copy()
     random.shuffle(perguntas_misturadas)
 
-    # O 'return' envia os dados direto para o navegador. Sem print, sem input!
+
     return {"status": "sucesso", "perguntas": perguntas_misturadas}
 
 
@@ -56,7 +55,7 @@ banco_de_perguntas = [
 ]
 
 
-# 1. API Route: Returns only the raw question data
+
 @app.get("/api/quiz")
 def obter_perguntas():
     lista_embaralhada = banco_de_perguntas.copy()
@@ -64,7 +63,6 @@ def obter_perguntas():
     return lista_embaralhada
 
 
-# 2. HTML Route: Returns a beautiful visual page that plays the quiz!
 @app.get("/", response_class=HTMLResponse)
 def pagina_principal():
     html_content = """
@@ -83,7 +81,7 @@ def pagina_principal():
     </head>
     <body>
         <div class="quiz-container">
-            <h1>🎯 Meu Quiz FastAPI</h1>
+            <h1> quiz</h1>
             <div id="quiz-box">
                 <p id="pergunta">Carregando pergunta...</p>
                 <div id="opcoes"></div>
@@ -105,7 +103,7 @@ def pagina_principal():
 
             function mostrarPergunta() {
                 if (perguntaAtual >= perguntas.length) {
-                    document.getElementById('quiz-box').innerHTML = `<h2>🏁 Fim de Jogo!</h2>`;
+                    document.getElementById('quiz-box').innerHTML = `<h2>cabo o jogo!</h2>`;
                     document.getElementById('resultado').innerText = `Sua pontuação final: ${pontuacao}/${perguntas.length}`;
                     return;
                 }
@@ -127,11 +125,11 @@ def pagina_principal():
             function verificarResposta(escolha, correta) {
                 const resP = document.getElementById('resultado');
                 if (escolha === correta) {
-                    resP.innerText = "✨ Resposta CORRETA!";
+                    resP.innerText = " resposta correta";
                     resP.style.color = "green";
                     pontuacao++;
                 } else {
-                    resP.innerText = `❌ Errou! A certa era: ${correta}`;
+                    resP.innerText = ` vixi errou  a certa era: ${correta}`;
                     resP.style.color = "red";
                 }
                 
