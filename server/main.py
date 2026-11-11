@@ -1,68 +1,27 @@
-import random
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
-banco_de_perguntas = [
-    {
-        "pergunta": "Qual é a capital do Brasil?",
-        "opcoes": ["A) Rio de Janeiro", "B) Brasília", "C) São Paulo", "D) Salvador"],
-        "resposta_correta": "B",
-    },
-    {
-        "pergunta": "Quantos planetas existem no Sistema Solar?",
-        "opcoes": ["A) 7", "B) 9", "C) 8", "D) 10"],
-        "resposta_correta": "C",
-    },
-]
-
-
-@app.get("/")
-def entregar_quiz():
-
-    perguntas_misturadas = banco_de_perguntas.copy()
-    random.shuffle(perguntas_misturadas)
-
-
-    return {"status": "sucesso", "perguntas": perguntas_misturadas}
-
-
-import random
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-
+import json
+import random
 app = FastAPI()
 
-banco_de_perguntas = [
-    {
-        "pergunta": "Qual é a capital do Brasil?",
-        "opcoes": ["Rio de Janeiro", "Brasília", "São Paulo", "Salvador"],
-        "resposta_correta": "Brasília",
-    },
-    {
-        "pergunta": "Quantos planetas existem no Sistema Solar?",
-        "opcoes": ["7", "9", "8", "10"],
-        "resposta_correta": "8",
-    },
-    {
-        "pergunta": "Qual é o maior oceano da Terra?",
-        "opcoes": ["Atlântico", "Índico", "Ártico", "Pacífico"],
-        "resposta_correta": "Pacífico",
-    },
-]
+
+codigo = (random.randint(1000,10000)) 
 
 
 
-@app.get("/api/quiz")
 def obter_perguntas():
-    lista_embaralhada = banco_de_perguntas.copy()
-    random.shuffle(lista_embaralhada)
-    return lista_embaralhada
+    with open("../web/perguntas.json", "r", encoding="utf-8") as arquivo:
+        return json.load(arquivo)  
+    
 
+salas = {
+    "sala": [],
+    "status": [],
+    "codigo":[codigo]
+}
 
-@app.get("/", response_class=HTMLResponse)
-def pagina_principal():
+@app.get("/jogo", response_class=HTMLResponse)
+def oi():
     html_content = """
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -184,7 +143,7 @@ def pagina_principal():
         async function carregarDados() {
             try {
                 // Certifique-se de que o arquivo perguntas.json está na mesma pasta que este index.html
-                const response = await fetch('perguntas.json');
+                const response = await fetch('/perguntas');
                 if (!response.ok) throw new Error('Falha ao carregar o arquivo');
                 
                 quizData = await response.json();
@@ -271,5 +230,7 @@ def pagina_principal():
     </script>
 </body>
 </html>
+   
     """
+
     return HTMLResponse(content=html_content)
