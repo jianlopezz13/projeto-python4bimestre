@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f2f5;
+    }
+
+    .menu {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px #0002;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      background: #110f0f;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="menu">
+    <h2>menu</h2>
+
+    <button class="btn" onclick="iniciar()">iniciar partida</button>
+
+    <button class="btn" onclick="criar()">criar partida</button>
+
+    <input type="text" id="codigo" placeholder="código da partida">
+
+    <button class="btn" onclick="entrar()">entrar na partida</button>
+
+  </div>
+
+  <script>
+    function iniciar() {
+      window.location.href = "partida.html";
+    }
+
+    function criar() {
+      window.location.href = "criar.html";
+    }
+
+    function entrar() {
+      let codigo = document.getElementById("codigo").value;
+
+      if (codigo.trim() === "") {
+        alert("digita o codigo da partida");
+      } else {
+        window.location.href = "partida.html?codigo=" + encodeURIComponent(codigo);
+      }
+    }
+  </script>
+
+</body>
+</html>
